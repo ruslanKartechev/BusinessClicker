@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 namespace RuslanScripts
 {
-
     public class BusinessUIBlock : MonoBehaviour
     {
         public BusinessBase mBusiness;

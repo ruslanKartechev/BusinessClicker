@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
-using System;
 namespace RuslanScripts
 {
-
     public class SimpleBusinessTicker : IBusinessTicker
     {
         [SerializeField] private List<BusinessBase> _businesses = new List<BusinessBase>();

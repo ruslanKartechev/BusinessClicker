@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RuslanScripts
@@ -7,6 +5,7 @@ namespace RuslanScripts
     public class GameManager : MonoBehaviour
     {
         public bool DoLoadOnStart = true;
+        public bool DoSaveOnPause = true;
         public bool DoSaveOnQuit = true;
         [SerializeField] private IGameDataSaver _dataSaver;
         [SerializeField] private BusinessManager _busManager;
@@ -30,9 +29,19 @@ namespace RuslanScripts
             _ui.Init();
         }
 
+        public void OnApplicationPause(bool pause)
+        {
+            Debug.Log("ON APPLICATION PAUSE");
+            if(pause == true && DoSaveOnPause == true)
+            {
+                _dataSaver.SaveAll();
+            }
+        }
+
         public void OnApplicationQuit()
         {
-            if(DoSaveOnQuit == true) 
+            Debug.Log("ON APPLICATION QUIT");
+            if (DoSaveOnQuit == true) 
             { 
                 _dataSaver.SaveAll();
             }

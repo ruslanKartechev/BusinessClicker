@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
-
 namespace RuslanScripts
 {
     public abstract class BusinessBase : ScriptableObject

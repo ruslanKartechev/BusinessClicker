@@ -2,7 +2,6 @@
 using UnityEngine;
 namespace RuslanScripts
 {
-
     public class MoneyManager : MonoBehaviour
     {
         public bool UseLoadedData = true;
